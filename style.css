@@ -16,14 +16,6 @@ html, body {
 .plugin-container:hover .plugin-container__progress{
     height: 3px;
 }
-.plugin-container__item {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    float: left;
-    background-size: cover;
-    z-index: 1;
-}
 .plugin-container__hover {
     position: absolute;
     top: 0;
@@ -32,13 +24,11 @@ html, body {
     bottom: 0;
     width: 100%;
     height: 100%;
-    z-index: 2;
 }
 .plugin-container__hover-item {
     position: relative;
     height: 100%;
     float: left;
-    z-index: 3;
 }
 .plugin-container__progress {
     position: absolute;
@@ -49,7 +39,6 @@ html, body {
     background: #c8c8c8;
     -webkit-transition: height .2s;
     transition: height .2s;
-    z-index: 3;
 }
 .plugin-container__progress-track {
     position: absolute;
@@ -60,4 +49,27 @@ html, body {
     background: #ff9d00;
     -webkit-transition: left .3s;
     transition: left .3s;
+}
+.plugin-container__images-wrapper {
+    position: relative;
+    height: 100%;
+}
+.plugin-container__images {
+    position: relative;
+    left: 0;
+    height: 100%;
+    -webkit-transition: left .3s;
+    transition: left .3s;
+    white-space: nowrap;
+}
+.plugin-container__item {
+    display: inline-block;
+    position: relative;
+    background-size: cover;
+}
+.plugin-container__item--last {
+    background-color: rgba(000, 000, 000, 0.321);
+}
+.plugin-container__item--last:hover {
+    cursor: pointer;
 }
