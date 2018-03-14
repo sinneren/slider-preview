@@ -24,7 +24,12 @@
     <script src="../slider-preview.js"></script>
     <script>
         $(document).ready(() => {
-            $('#plug').myPlugin();
+            $('#plug').sp({
+                maximum_items: 6,
+                activeChanged: function () {
+                    console.log('Active slide change event');
+                }
+            });
         });
     </script>
 </body>
