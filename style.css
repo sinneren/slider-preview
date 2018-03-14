@@ -1,0 +1,63 @@
+html, body {
+    height: 100%;
+}
+.container {
+    width: 600px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.plugin-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.plugin-container:hover .plugin-container__progress{
+    height: 3px;
+}
+.plugin-container__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    background-size: cover;
+    z-index: 1;
+}
+.plugin-container__hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.plugin-container__hover-item {
+    position: relative;
+    height: 100%;
+    float: left;
+    z-index: 3;
+}
+.plugin-container__progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: #c8c8c8;
+    -webkit-transition: height .2s;
+    transition: height .2s;
+    z-index: 3;
+}
+.plugin-container__progress-track {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: #ff9d00;
+    -webkit-transition: left .3s;
+    transition: left .3s;
+}
